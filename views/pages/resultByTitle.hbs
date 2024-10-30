@@ -1,0 +1,15 @@
+<h2>Matching Movies</h2>
+{{#if movies.length}}
+  {{#each movies}}
+    <div>
+      <p><strong>ID:</strong> {{this.Movie_ID}}</p>
+      <p><strong>Title:</strong> {{this.Title}}</p>
+      <p><strong>Year:</strong> {{this.Year}}</p>
+      <p><strong>Rating:</strong> {{this.Rated}}</p>
+      <hr>
+    </div>
+  {{/each}}
+{{else}}
+  <p>No movies found matching that title.</p>
+{{/if}}
+<a href="/data/search/title">Search Another Movie</a>

@@ -1,0 +1,22 @@
+<h2>All Movies Data</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Movie ID</th>
+            <th>Title</th>
+            <th>Metascore</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each movies}}
+        {{!-- <tr class="{{highlightIfBlank this.Metascore}}">
+            <td>{{this.Movie_ID}}</td>
+            <td>{{this.Title}}</td>
+            <td>{{this.Metascore}}</td>
+        </tr> --}}
+        {{!-- step10 --}}
+          {{> movieItem}} <!-- Pass the current movie to the partial -->
+        {{/each}}
+
+    </tbody>
+</table>

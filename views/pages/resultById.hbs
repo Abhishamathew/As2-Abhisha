@@ -1,0 +1,11 @@
+{{#if movie}}
+  <h2>Movie Details</h2>
+  <p><strong>ID:</strong> {{movie.Movie_ID}}</p>
+  <p><strong>Title:</strong> {{movie.Title}}</p>
+  <p><strong>Year:</strong> {{movie.Year}}</p>
+  <p><strong>Rating:</strong> {{movie.Rated}}</p>
+  <a href="/data/search/id">Search Another Movie</a>
+{{else}}
+  <p>Movie with the given ID not found!</p>
+  <a href="/data/search/id">Try Again</a>
+{{/if}}
