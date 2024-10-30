@@ -48,7 +48,7 @@ app.get('/data/search/id', (req, res) => {
 app.get('/data/search/id/result', (req, res) => {
     const movieId = parseInt(req.query.movie_id);
     
-    fs.readFile(path.join(__dirname, 'movieData', 'movieData.json'), 'utf8', (err, data) => {
+    fs.readFile(path.join(__dirname, 'movieData', 'movie-dataset-a2.json'), 'utf8', (err, data) => {
         if (err) return res.status(500).render('error', { error: "Internal Server Error" });
         
         const moviesData = JSON.parse(data);
@@ -67,7 +67,7 @@ app.get('/data/search/title', (req, res) => {
 app.get('/data/search/title/result', (req, res) => {
     const searchTitle = req.query.movie_title.toLowerCase(); // Using req.query
 
-    fs.readFile(path.join(__dirname, 'movieData', 'movieData.json'), 'utf8', (err, data) => {
+    fs.readFile(path.join(__dirname, 'movieData', 'movie-dataset-a2.json'), 'utf8', (err, data) => {
         if (err) return res.status(500).render('error', { error: "Internal Server Error" });
 
         const moviesData = JSON.parse(data);
@@ -80,7 +80,7 @@ app.get('/data/search/title/result', (req, res) => {
 // Step 7: Route to display all movie data
 // Route to display all movie data
 // app.get('/allData', (req, res) => {
-//     fs.readFile(path.join(__dirname, 'movieData', 'movieData.json'), 'utf8', (err, data) => {
+//     fs.readFile(path.join(__dirname, 'movieData', 'movie-dataset-a2.json'), 'utf8', (err, data) => {
 //         if (err) return res.status(500).render('error', { error: "Internal Server Error" });
 
 //         const moviesData = JSON.parse(data);
@@ -90,7 +90,7 @@ app.get('/data/search/title/result', (req, res) => {
 
 //step 9
 app.get('/allData', (req, res) => {
-    fs.readFile(path.join(__dirname, 'movieData', 'movieData.json'), 'utf8', (err, data) => {
+    fs.readFile(path.join(__dirname, 'movieData', 'movie-dataset-a2.json'), 'utf8', (err, data) => {
         if (err) return res.status(500).render('error', { error: "Internal Server Error" });
 
         const moviesData = JSON.parse(data);
@@ -101,7 +101,7 @@ app.get('/allData', (req, res) => {
 
 // Step 8: Route for filtered movie data
 app.get('/allData/filtered', (req, res) => {
-    fs.readFile(path.join(__dirname, 'movieData', 'movieData.json'), 'utf8', (err, data) => {
+    fs.readFile(path.join(__dirname, 'movieData', 'movie-dataset-a2.json'), 'utf8', (err, data) => {
         if (err) return res.status(500).render('error', { error: "Internal Server Error" });
 
         const moviesData = JSON.parse(data);
